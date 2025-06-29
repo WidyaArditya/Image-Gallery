@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @layer container {
-  .container {
-    @apply min-h-screen min-w-full relative flex items-center;
+  .main-container {
+    @apply min-h-screen min-w-full  flex items-center;
   }
 }
 @layer jumbotron {
@@ -10,7 +10,7 @@
     @apply absolute min-h-screen w-full overflow-hidden;
   }
   .jumbotron-img-style {
-    @apply absolute inset-0 w-full h-full object-cover z-0;
+    @apply absolute inset-0 w-full h-full object-cover z-0 shrink-0;
   }
   .title-jumbotron {
     @apply bg-clip-text text-transparent bg-linear-to-t from-[#160608] to-[#fafafa] absolute text-2xl text-balance font-bold;
@@ -19,12 +19,24 @@
 
 @layer thumbnail {
   .thumbnails {
-    @apply absolute flex justify-center overflow-hidden items-center w-full gap-2 z-10 translate-y-12 h-12;
+    @apply absolute flex justify-center overflow-hidden items-center w-full gap-2 z-10 translate-y-12 h-20;
+  }
+  .container-thumbnails {
+    @apply box-border relative grid grid-cols-3 gap-2 my-3 overflow-hidden;
+  }
+  .inner-container-thumbnails {
+    @apply flex transition-transform duration-500;
   }
   .thumbnail-style {
     @apply w-8 h-36 flex items-center;
   }
   .thumbnail-img-style {
     @apply object-cover rounded-md border-[1px] border-amber-50;
+  }
+  .prev-button {
+    @apply absolute z-1 p-2 transform -translate-y-1/2 bg-white rounded-lg left-1 top-1/2 hover:bg-gray-100 md:block drop-shadow-lg w-6 h-1 flex items-center;
+  }
+  .next-button {
+    @apply absolute z-10 p-2 transform -translate-y-1/2 bg-white rounded-lg right-1 top-1/2 hover:bg-gray-100 md:block drop-shadow-lg w-6 h-1 flex items-center;
   }
 }
