@@ -1,0 +1,11 @@
+# Dependensi Node.js
+/node_modules
+
+# Log file, dll.
+npm-debug.log*
+yarn-error.log*
+
+# File output build atau sementara
+# Jika Anda memiliki folder build/dist selain public, tambahkan di sini juga
+# /dist
+# /build

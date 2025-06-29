@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer container {
+  .container {
+    @apply min-h-screen min-w-full relative flex items-center;
+  }
+}
+@layer jumbotron {
+  .jumbotron-style-position {
+    @apply absolute min-h-screen w-full overflow-hidden;
+  }
+  .jumbotron-img-style {
+    @apply absolute inset-0 w-full h-full object-cover z-0;
+  }
+  .title-jumbotron {
+    @apply bg-clip-text text-transparent bg-linear-to-t from-[#160608] to-[#fafafa] absolute text-2xl text-balance font-bold;
+  }
+}
+
+@layer thumbnail {
+  .thumbnails {
+    @apply absolute flex justify-center overflow-hidden items-center w-full gap-2 z-10 translate-y-12 h-12;
+  }
+  .thumbnail-style {
+    @apply w-8 h-36 flex items-center;
+  }
+  .thumbnail-img-style {
+    @apply object-cover rounded-md border-[1px] border-amber-50;
+  }
+}
