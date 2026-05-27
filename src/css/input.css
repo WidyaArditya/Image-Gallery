@@ -1,42 +1,64 @@
 @import "tailwindcss";
+@reference "tailwindcss";
 
-@layer container {
+@layer components {
+  /* MAIN CONTAINER */
   .main-container {
-    @apply min-h-screen min-w-full  flex items-center;
+    @apply relative w-full min-h-screen overflow-hidden;
   }
-}
-@layer jumbotron {
-  .jumbotron-style-position {
-    @apply absolute min-h-screen w-full overflow-hidden;
+  /* JUMBOTRON */
+  .jumbotron-container {
+    @apply relative w-full min-h-screen overflow-hidden;
   }
   .jumbotron-img-style {
-    @apply absolute inset-0 w-full h-full object-cover z-0 shrink-0;
+    @apply absolute inset-0 w-full h-full sm:object-cover object-center;
   }
-  .title-jumbotron {
-    @apply bg-clip-text text-transparent bg-linear-to-t from-[#160608] to-[#fafafa] absolute text-2xl text-balance font-bold;
+  .jumbotron-container figure {
+    @apply transition-opacity duration-700;
   }
-}
-
-@layer thumbnail {
-  .thumbnails {
-    @apply absolute flex justify-center overflow-hidden items-center w-full gap-2 z-10 translate-y-12 h-20;
-  }
+  /* THUMBNAILS */
   .container-thumbnails {
-    @apply box-border relative grid grid-cols-3 gap-2 my-3 overflow-hidden;
+    @apply absolute bg-linear-to-t from-black to-transparent
+      bottom-0 w-full z-20 min-h-24 md:min-h-48;
   }
-  .inner-container-thumbnails {
-    @apply flex transition-transform duration-500;
+  .container-carousel {
+    @apply max-w-full flex items-center justify-center transition-all duration-500;
   }
-  .thumbnail-style {
-    @apply w-8 h-36 flex items-center;
+  .inner-container-carousel {
+    @apply flex relative items-center justify-center min-w-full;
+    perspective: 1000px;
   }
-  .thumbnail-img-style {
-    @apply object-cover rounded-md border-[1px] border-amber-50;
+  .carousel-items {
+    @apply absolute w-[80px] sm:w-[150px] lg:w-[200px] cursor-pointer transition-all duration-500 flex-shrink-0 min-h-56 will-change-transform transform-gpu;
+  }
+  .img-carousel {
+    @apply object-cover min-w-full min-h-full rounded-sm;
+  }
+  .name-item {
+    @apply text-center font-bold text-amber-50  sm:text-2xl text-xs;
+  }
+  /* NAVIGATION BUTTON */
+  .prev-button,
+  .next-button {
+    @apply absolute z-20 md:flex items-center justify-center w-6 h-6 sm:w-10 sm:h-10 bg-white rounded-xs bottom-36 drop-shadow-lg hidden;
   }
   .prev-button {
-    @apply absolute z-1 p-2 transform -translate-y-1/2 bg-white rounded-lg left-1 top-1/2 hover:bg-gray-100 md:block drop-shadow-lg w-6 h-1 flex items-center;
+    @apply left-1;
   }
   .next-button {
-    @apply absolute z-10 p-2 transform -translate-y-1/2 bg-white rounded-lg right-1 top-1/2 hover:bg-gray-100 md:block drop-shadow-lg w-6 h-1 flex items-center;
+    @apply right-1;
+  }
+  /* PAGIANTION DOTS */
+  .container-pagination-dots {
+    @apply absolute bottom-12 left-1/2 -translate-x-1/2 z-50;
+  }
+  #pagination-dots {
+    @apply flex justify-center items-center gap-1;
+  }
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) and (min-height: 700px) {
+    .container-thumbnails {
+      @apply min-h-48;
+    }
   }
 }

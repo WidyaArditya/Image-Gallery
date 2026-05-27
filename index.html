@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,44 +7,107 @@
     <title>komikme</title>
   </head>
   <body>
-    <div class="main-container">
-      <div class="jumbotron-style-position">
+    <main class="main-container">
+      <section class="jumbotron-container" aria-label="Featured anime">
         <figure>
           <img
             src="public/img/Jumbotron_AOT.jpg"
             alt="Attack on titan"
             class="jumbotron-img-style"
           />
-          <figcaption class="title-jumbotron">Attack On Titan</figcaption>
         </figure>
-      </div>
-      <div class="thumbnails">
-        <button id="prevMenu" class="prev-button">
-          <i data-feather="chevron-left"></i>
-        </button>
-        <div class=".container-thumbnails" id="dragContainer">
-          <div class="inner-container-thumbnails">
-            <figure class="thumbnail-style">
+        <figure>
+          <img
+            src="public/img/Jumbotron_CM.jpg"
+            alt="naruto"
+            class="jumbotron-img-style"
+          />
+        </figure>
+        <figure>
+          <img
+            src="public/img/Jumbotron_Naruto.jpg"
+            alt="Chainsaw-Man"
+            class="jumbotron-img-style"
+          />
+        </figure>
+        <figure>
+          <img
+            src="public/img/Jumbotron_Bresek.jpg"
+            alt="Bresek"
+            class="jumbotron-img-style"
+          />
+        </figure>
+        <figure>
+          <img
+            src="public/img/Jumbotron_JJK.jpg"
+            alt="Jujutsu Kaisen"
+            class="jumbotron-img-style"
+          />
+        </figure>
+      </section>
+      <section
+        class="container-thumbnails"
+        aria-label="Anime carousel thumbnails"
+      >
+        <div class="container-carousel" id="dragContainer">
+          <div class="inner-container-carousel">
+            <figure class="carousel-items">
               <img
                 src="public/img/Avatar_AOT.jpg"
                 alt="Avatar attack on titan"
-                class="thumbnail-img-style"
+                class="img-carousel"
               />
+              <figcaption class="name-item">
+                <p>Attack On Titan</p>
+              </figcaption>
             </figure>
-            <figure class="thumbnail-style">
+            <figure class="carousel-items">
+              <img
+                src="public/img/Avatar_CM.jpg"
+                alt="Avatar Chainsaw-Man"
+                class="img-carousel"
+              />
+              <figcaption class="name-item">
+                <p>Chainsaw-Man</p>
+              </figcaption>
+            </figure>
+            <figure class="carousel-items">
               <img
                 src="public/img/Avatar_Naruto.jpg"
-                alt="Avatar attack on titan"
-                class="thumbnail-img-style"
+                alt="Avatar Naruto"
+                class="img-carousel"
               />
+              <figcaption class="name-item"><p>Naruto</p></figcaption>
+            </figure>
+            <figure class="carousel-items">
+              <img
+                src="public/img/Avatar_Bresek.jpg"
+                alt="Avatar Bresek"
+                class="img-carousel"
+              />
+              <figcaption class="name-item"><p>Bresek</p></figcaption>
+            </figure>
+            <figure class="carousel-items">
+              <img
+                src="public/img/Avatar_JJK.jpg"
+                alt="Avatar jujutsu kaisen"
+                class="img-carousel"
+              />
+              <figcaption class="name-item"><p>Jujutsu Kaisen</p></figcaption>
             </figure>
           </div>
         </div>
-        <button id="nextMenu" class="next-button">
+        <nav class="container-pagination-dots">
+          <div id="pagination-dots"></div>
+        </nav>
+        <button id="prevMenu" class="prev-button" aria-label="Previous slide">
+          <i data-feather="chevron-left"></i>
+        </button>
+        <button id="nextMenu" class="next-button" aria-label="next slide">
           <i data-feather="chevron-right"></i>
         </button>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
   <script src="src/script.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
