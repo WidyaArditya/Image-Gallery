@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="././public/css/output.css" rel="stylesheet" />
+    <link href="./public/css/output.css" rel="stylesheet" />
     <title>komikme</title>
   </head>
   <body>
@@ -19,14 +19,14 @@
         <figure>
           <img
             src="./public/img/Jumbotron_CM.jpg"
-            alt="naruto"
+            alt="Chainsaw-Man"
             class="jumbotron-img-style"
           />
         </figure>
         <figure>
           <img
             src="./public/img/Jumbotron_Naruto.jpg"
-            alt="Chainsaw-Man"
+            alt="Naruto"
             class="jumbotron-img-style"
           />
         </figure>
@@ -97,7 +97,7 @@
             </figure>
           </div>
         </div>
-        <nav class="container-pagination-dots">
+        <nav class="container-pagination-dots" aria-label="Carousel pagination">
           <div id="pagination-dots"></div>
         </nav>
         <button id="prevMenu" class="prev-button" aria-label="Previous slide">
@@ -108,10 +108,10 @@
         </button>
       </section>
     </main>
+    <script src="./src/script.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
-  <script src="./src/script.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script>
-    feather.replace();
-  </script>
 </html>
