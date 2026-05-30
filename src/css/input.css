@@ -28,7 +28,7 @@
     perspective: 1000px;
   }
   .carousel-items {
-    @apply absolute w-[80px] sm:w-[150px] lg:w-[200px] cursor-pointer transition-all duration-500 flex-shrink-0 min-h-56 will-change-transform transform-gpu;
+    @apply absolute w-[80px] sm:w-[150px] lg:w-[200px] cursor-pointer transition-all duration-500 shrink-0 min-h-56 will-change-transform transform-gpu;
   }
   .img-carousel {
     @apply object-cover min-w-full min-h-full rounded-sm;
