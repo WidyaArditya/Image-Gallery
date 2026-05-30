@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     rotationStrength: 60,
 
     // responsive horizontal spacing
-    mobileTranslateX: 70,
-    tabletTranslateX: 100,
-    desktopTranslateX: 150,
+    mobileHorizontalSpacing: 70,
+    tabletHorizontalSpacing: 100,
+    desktopHorizontalSpacing: 150,
 
     // responsive breakpoints
     mobileBreakpoint: 640,
@@ -60,9 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // set middle card as initial active card
   const initialActiveSlideIndex = Math.floor(carouselCards.length / 2);
-
-  // store current viewport width
-  const viewportWidth = window.innerWidth;
 
   // global carousel state
   const state = {
@@ -189,15 +186,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // responsive horizontal spacing
   function getHorizontalSpacing() {
+    // store current viewport width
+    const viewportWidth = window.innerWidth;
     return viewportWidth < CONFIG.mobileBreakpoint
-      ? CONFIG.mobileTranslateX
+      ? CONFIG.mobileHorizontalSpacing
       : viewportWidth < CONFIG.desktopBreakpoint
-        ? CONFIG.tabletTranslateX
-        : CONFIG.desktopTranslateX;
+        ? CONFIG.tabletHorizontalSpacing
+        : CONFIG.desktopHorizontalSpacing;
   }
 
   // responsive vertical spacing
   function getVerticalSpacing() {
+    // store current viewport width
+    const viewportWidth = window.innerWidth;
     return viewportWidth < CONFIG.tabletBreakpoint
       ? CONFIG.mobileTranslateY
       : CONFIG.desktopTranslateY;
